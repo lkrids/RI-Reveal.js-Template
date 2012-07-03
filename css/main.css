@@ -79,7 +79,7 @@ body {
 	text-shadow: 0px 0px 6px rgba(0,0,0,0.2);
 }
 
-.reveal h1 { font-size: 136px; 	}
+.reveal h1 { font-size: 136px; color: #fff; 	}
 .reveal h2 { font-size: 76px;	}
 .reveal h3 { font-size: 56px;	}
 .reveal h4 { font-size: 36px;	}
@@ -89,7 +89,7 @@ body {
 .reveal h3.inverted,
 .reveal h4.inverted {
 	color: #fff;
-	text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+	text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .reveal h1 {
@@ -300,7 +300,6 @@ body {
 	width: 100px;
 	height: 100px;
 	z-index: 30;
-
 	right: 0;
 	bottom: 0;
 }
@@ -310,15 +309,18 @@ body {
 		position: absolute;
 		opacity: 0.1;
 		color: #fff;
+		font-family: 'Arial';
 	}
 		.reveal .controls a.enabled {
 			opacity: 0.6;
-			color: #7eb400;
-
+			color: #333;
 			text-shadow: 0px 0px 2px hsla(185, 45%, 70%, 0.3);
 		}
 		.reveal .controls a.enabled:active {
 			margin-top: 1px;
+		}
+		.reveal .controls a:hover {
+			background: none;
 		}
 
 	.reveal .controls .left {
@@ -952,11 +954,14 @@ body {
 	        transition: background 800ms ease;
 }
 .green .state-background {
-	background-color: rgba(38, 202, 40, 0.6);
+	background-image: url('../assets/img/green_bg.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 .green .reveal h1 {
 	color: #fff;
+	margin-top: 150px;
 }
 
 .basement .state-background {
@@ -978,7 +983,7 @@ body {
 }
 
 .alert .state-background {
-	background: rgba( 200, 50, 30, 0.6 );
+	background: rgba( 2, 250, 250, 0.6 );
 }
 .soothe .state-background {
 	background: rgba( 50, 200, 90, 0.4 );
