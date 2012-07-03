@@ -10,8 +10,15 @@
  *********************************************/
 
 @font-face {
-	font-family: 'League Gothic';
-	src: url('../assets/fonts/leaguegothic/league_gothic-webfont.ttf') format('truetype');
+	font-family: 'Trade Gothic Light';
+	src: url('../assets/fonts/tradegothic/tradegothic-light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Trade Gothic Bold';
+	src: url('../assets/fonts/tradegothic/tradegothic-bold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -35,20 +42,22 @@ body {
 	margin: 0;
 	overflow: hidden;
 	
-	font-family: 'Lato', Times, 'Times New Roman', serif;
+	font-family: 'Trade Gothic Light', sans-serif;
 	font-size: 36px;
 	font-weight: 200;
 	letter-spacing: -0.02em;
-	color: #eee;
+	color: #636466;
+	
+	background: rgb(249,249,249); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(249,249,249,1) 1%, rgba(199,200,202,1) 74%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,rgba(249,249,249,1)), color-stop(74%,rgba(199,200,202,1))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(249,249,249,1) 1%,rgba(199,200,202,1) 74%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, rgba(249,249,249,1) 1%,rgba(199,200,202,1) 74%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, rgba(249,249,249,1) 1%,rgba(199,200,202,1) 74%); /* IE10+ */
+	background: radial-gradient(ellipse at center, rgba(249,249,249,1) 1%,rgba(199,200,202,1) 74%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#c7c8ca',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-	background: #1c1e20;
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM1NTVhNWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMWMxZTIwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%, rgba(28,30,32,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(85,90,95,1)), color-stop(100%,rgba(28,30,32,1)));
-	background: -webkit-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
-	background: radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
+	
 }
 
 /*********************************************
@@ -60,9 +69,9 @@ body {
 .reveal h4 {
 	margin: 0 0 20px 0;
 	
-	color: #eee;
+	color: #636466;
 	
-	font-family: 'League Gothic', sans-serif;
+	font-family: 'Trade Gothic Bold', sans-serif;
 	line-height: 0.9em;
 	letter-spacing: 0.02em;
 	
@@ -169,6 +178,7 @@ body {
 
 .reveal p {
 	margin-bottom: 10px;
+	text-shadow: 0px 1px 0px #fff;
 }
 
 .reveal blockquote {
@@ -211,12 +221,12 @@ body {
 
 .reveal table th, 
 .reveal table td {
- 	 text-align: left;
- 	 padding-right: .3em;
+ 	 text-align: left;
+ 	 padding-right: .3em;
 }
 
 .reveal table th {
- 	 text-shadow: rgb(255,255,255) 1px 1px 2px;
+ 	 text-shadow: rgb(255,255,255) 1px 1px 2px;
 }
 
 .reveal small {
@@ -236,7 +246,7 @@ body {
 	}
 
 .reveal a:not(.image) {
-	color: hsl(185, 85%, 50%);
+	color: #7eb400;
 	text-decoration: none;
 
 	-webkit-transition: all .2s ease;
@@ -247,8 +257,8 @@ body {
 }
 	
 	.reveal a:not(.image):hover {
-		color: hsl(185, 85%, 70%);
-		background: hsla(185, 25%, 20%, 0.4);
+		color: #eee;
+		background: #7eb400;
 		text-shadow: none;
 		border: none;
 		border-radius: 2px;
@@ -272,7 +282,7 @@ body {
 
 	.reveal a:hover img {
 		background: rgba(255,255,255,0.2);
-		border-color: #13DAEC;
+		border-color: #7eb400;
 		
 		-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 		   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
@@ -303,7 +313,7 @@ body {
 	}
 		.reveal .controls a.enabled {
 			opacity: 0.6;
-			color: hsl(185, 85%, 70%);
+			color: #7eb400;
 
 			text-shadow: 0px 0px 2px hsla(185, 45%, 70%, 0.3);
 		}
@@ -348,7 +358,7 @@ body {
 	
 	.reveal .progress span {
 		display: block;
-		background: hsl(185, 85%, 50%);
+		background: #7eb400;
 		height: 100%;
 		width: 0px;
 
@@ -423,7 +433,7 @@ body {
     padding: 0 2px;
 
     color: #fff;
-    background: hsl(185, 60%, 35%);
+    background: #7eb400;
 
     -webkit-transform-origin: 50% 0%;
        -moz-transform-origin: 50% 0%;
@@ -851,16 +861,16 @@ body {
 .reveal.neon a,
 .reveal.neon a:hover,
 .reveal.neon .controls a.enabled {
-	color: #5de048;
+	color: #7eb400;
 }
 
 .reveal.neon .progress span,
 .reveal.neon .roll span:after {
-	background: #5de048;
+	background: #7eb400;
 }
 
 .reveal.neon a.image:hover img {
-	border-color: #5de048;
+	border-color: #7eb400;
 }
 
 
@@ -941,6 +951,32 @@ body {
 	     -o-transition: background 800ms ease;
 	        transition: background 800ms ease;
 }
+.green .state-background {
+	background-color: rgba(38, 202, 40, 0.6);
+}
+
+.green .reveal h1 {
+	color: #fff;
+}
+
+.basement .state-background {
+	background: #1c1e20;
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%, rgba(28,30,32,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(85,90,95,1)), color-stop(100%,rgba(28,30,32,1)));
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
+	background: radial-gradient(center, ellipse cover,  rgba(85,90,95,1) 0%,rgba(28,30,32,1) 100%);
+}
+
+.basement .reveal h1, 
+.basement .reveal h2, 
+.basement .reveal h3, 
+.basement .reveal h4,
+.basement p {
+	color: #fff!important;
+}
+
 .alert .state-background {
 	background: rgba( 200, 50, 30, 0.6 );
 }
