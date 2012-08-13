@@ -954,7 +954,7 @@ body {
 	        transition: background 800ms ease;
 }
 .green .state-background {
-	background-image: url('../assets/img/green_bg.png');
+	background-image: url('../assets/img/green_bg.jpg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
