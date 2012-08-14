@@ -124,6 +124,10 @@
 
 				<section>
 					<style type="text/css">
+						.method-list{
+							height: 400px;
+							overflow: scroll;
+						}
 						.method-list span:nth-child(odd){
 							color: green;
 						}
@@ -145,13 +149,17 @@
 					</section>
 					<section>
 						<h2>Community</h2>
-						<p>jQuery Teammembers: Clark A, Julian Aubourg, John Bender, Tyler Benzinger, Jay Blanchard, Kin Blas, Kris Borchers, Kevin Boudloche, Darcy Clarke, Anne-Gaelle Colom, Kim Cooperider, Jasper De Groot, Ryan Gibbons, Richard Gibson , Maurice Gottlieb, Paul Irish, Scott Jehl, Sean Koole, Chris Lea, Mat Marquis, Doug Neiner, Addy Osmani, Abby Phoenix, Jason Scott, Gabriel Schulhof, Ghislain Seguin, Alex Sexton, Mike Sherov, Karl Swedberg, Timo “Krinkle” Tijhof, Patty Toland, Maggie Costello Wachs, Timmy Willison, and Keith Wood</p>
+						<p>jQuery Core: Julian Aubourg (jaubourg), Corey Frang (gnarf), Richard Gibson (gibson042), Mike Sherov (mikesherov), Rick Waldron (rwaldron), and Timmy Willison (timmywil)</p>
 						<p style='padding-top:3%;'><strong>And all the front-end developers that use jQuery (http://bugs.jquery.com/newticket and https://github.com/jquery/jquery)</strong></p>
 					</section>
 					<section>
 						<h2>Grunt</h2>
 						<p>Ben Allmen (@cowboy)</p>
 						<p>Grunt is a task-based command line build tool for JavaScript projects</p>
+						<ul>
+							<li>Another build tool - similar to ant and make</li>
+							<li>More later</li>
+						</ul>
 					</section>
 					<section>
 						<h2>Closure Compiler</h2>
@@ -162,17 +170,41 @@
 					<section>
 						<h2>Plugin respository</h2>
 						<p>Conituing working on this</p>
+						<p>Plugin database issue</p>
 						<p>Curation is difficult</p>
 					</section>
 					<section>
-						<h2>jQuery 1.8, 1.9, 2.0</h2>
-						<p>jQuery 1.8 
+						<h2>jQuery 1.8</h2>
+						<ul>
+							<li>Released August 9</li>
+							<li>Sizzle re-architected - querySelectorAll()</li>
+							<li>160 bugs closed</li>
+							<li>And more http://blog.jquery.com/2012/08/09/jquery-1-8-released/</li>
+						</ul>
+					</section>
+					<section>
+						<h2>jQuery 1.9 and 2.0</h2>
+						<ul>
+							<li>jQuery 1.9 - normal updates from 1.8 <strong class='fragment'>(IE Conditionals)</strong></li>
+							<li>jQuery 2.0 - same as 1.9, no IE 6/7/8, significant refactor - plugins unlikely</li>
+							<li>jQuery 2.1 - might add new APIs not supported by 1.9 - not until ~2014</li>
+						</ul>
 					</section>
 				</section>
 
 				<section>
 					<h2>jQuery Projects - Sizzle</h2>
-					
+					<p>A pure-JavaScript CSS selector engine designed to be easily dropped in to a host library.</p>
+				</section>
+
+				<section>
+					<h2>Improvements</h2>
+					<ul>
+						<li class='fragment'>id rooted selectors are 300% faster - $("#imgSlider").find("...")</li>
+						<li class='fragment'>querySelectorAll() has quirks in major browsers</li>
+						<li class='fragment'>Shorter codepath to querySelectorAll()</li>
+						<li class='fragment'>Simple selectors 5% faster- $(".tiles"), $("a"), and $("#imgSlider")</li>
+					</ul>
 				</section>
 
 				<section>
@@ -443,7 +475,11 @@
 					</section>
 				</section>
 
-	
+				<section>
+					<h2>Learn</h2>
+					<a href="http://events.jquery.org/2012/sf/#schedule" target="_blank">Slides</a>
+					<a href="http://www.confreaks.com/events/jqcon2012" target="_blank">Videos</a>
+				</section>
 				
 				<section>
 					<h1>THE END</h1>
