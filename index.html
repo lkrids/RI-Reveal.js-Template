@@ -546,8 +546,110 @@ $(document).ready(function() {
 						<p>Content</p>
 					</section>
 					<section data-state="basement">
-						<h2>Basement</h2>
-						<p>Content</p>
+						<h2>Use A CDN</h2>
+						<pre>
+							<code contenteditable class="html">
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;&gt;&lt;/script&gt;								
+							</code>
+						</pre>
+					</section>
+					<section data-state="basement">
+						<br><br>
+						<h2>Use development version for development</h2>
+					</section>
+					<section data-state="basement">
+						<br><br>
+						<h2>Use the latest version</h2>
+					</section>
+					<section data-state="basement">
+						<br><br>
+						<h2>Put scripts at the bottom of page to prevent blocking</h2>
+					</section>
+					<section data-state="basement">
+						<h2>selector performance</h2>
+						<pre>
+							<code contenteditable class="javascript">
+var notSoFast = $(&#39;[attr=&quot;this&quot;]&#39;),
+    fast = $(&#39;.class&#39;),
+    fastest = $(&#39;#id&#39;);							
+							</code>
+						</pre>
+					</section>
+					<section data-state="basement">
+						<h2>Cache objects</h2>
+						<pre>
+							<code contenteditable class="javascript">
+var $obj = $(&#39;#obj&#39;),
+    $sub = $obj.find(&#39;#sub&#39;);
+							</code>
+						</pre>
+					</section>
+					<section data-state="basement">
+						<h2>Use chaining</h2>
+						<pre>
+							<code contenteditable class="javascript">
+// Bad
+$(&#39;#id&#39;).detach();
+$(&#39;#id&#39;).css({
+      &#39;top&#39;: 20,
+      &#39;opacity&#39;: 0.8
+    });
+$(&#39;#id&#39;).appendTo($something);
+
+// Good
+$(&#39;#id&#39;).detach()
+    .css({
+      &#39;top&#39;: 20,
+      &#39;opacity&#39;: 0.8
+    })
+    .appendTo($something);
+							</code>
+						</pre>
+					</section>
+					<section data-state="basement">
+						<h2>Use .on() for event delegation</h2>
+						<pre>
+							<code contenteditable class="javascript">
+// Bad
+$(&#39;#id&#39;).click( ... );
+
+// Good
+$(&#39;#id&#39;).on(&#39;click&#39;, ... );
+							</code>
+						</pre>
+					</section>
+
+					<section data-state="basement">
+						<h2>Minimize DOM Touches</h2>
+						<pre>
+							<code contenteditable class="javascript">
+// Remove obj from DOM when doing work.
+$(&#39;#id&#39;).detach().css( ... ).appendTo( ... );
+
+// Utilize documentFragment
+var $hook = $(&#39;#id&#39;),
+    frag = document.createDocumentFragment(),
+    element,
+    i;
+
+for (i = 0; i &lt; 5; i   ) {
+    element  = &#39;&lt;span&gt;Element&lt;/span&gt;&#39;;
+}
+
+frag.append(element);
+$hook.append(frag);
+							</code>
+						</pre>
+					</section>
+					<section data-state="basement">
+						<h2>Own jquery</h2>
+							<h3>Read the source</h3>
+							<br>
+							<h3>Join the community</h3>
+							<br>
+							<h3>Read changelog</h3>
+							<br>
+							<h3>Commit a bug fix</h3>
 					</section>
 				</section>
 
