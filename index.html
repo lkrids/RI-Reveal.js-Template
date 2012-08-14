@@ -64,6 +64,7 @@
 							<br><br>
 							Luke's Notes:<br>
 							<a href="http://lukeaskew.com/category/events/">http://lukeaskew.com/category/events/</a>
+							<br><br>
 							Lex's Notes:<br/>
 							They're in my head, so come chat
 						</p>
@@ -162,7 +163,17 @@
 						<p style='padding-top:3%;'><strong>And all the front-end developers that use jQuery (http://bugs.jquery.com/newticket and https://github.com/jquery/jquery)</strong></p>
 					</section>
 					<section>
-						<h2>Grunt</h2>
+						<h2>jQuery 1.8</h2>
+						<ul>
+							<li>Released August 9</li>
+							<li>Sizzle re-architected - querySelectorAll()</li>
+							<li>160 bugs closed</li>
+							<li>More modular, ready for Grunt (dependency management)</li>
+							<li>And more http://blog.jquery.com/2012/08/09/jquery-1-8-released/</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Grunt Build</h2>
 						<p>Ben Allmen (@cowboy)</p>
 						<p>Grunt is a task-based command line build tool for JavaScript projects</p>
 						<ul>
@@ -177,21 +188,6 @@
 						<p>Experimental branch coming soon...</p>
 					</section>
 					<section>
-						<h2>Plugin respository</h2>
-						<p>Conituing working on this</p>
-						<p>Plugin database issue</p>
-						<p>Curation is difficult</p>
-					</section>
-					<section>
-						<h2>jQuery 1.8</h2>
-						<ul>
-							<li>Released August 9</li>
-							<li>Sizzle re-architected - querySelectorAll()</li>
-							<li>160 bugs closed</li>
-							<li>And more http://blog.jquery.com/2012/08/09/jquery-1-8-released/</li>
-						</ul>
-					</section>
-					<section>
 						<h2>jQuery 1.9 and 2.0</h2>
 						<ul>
 							<li>jQuery 1.9 - normal updates from 1.8 <strong class='fragment'>(IE Conditionals)</strong></li>
@@ -199,22 +195,48 @@
 							<li>jQuery 2.1 - might add new APIs not supported by 1.9 - not until ~2014</li>
 						</ul>
 					</section>
+					<section>
+						<h2>IE Accomodations</h2>
+						<ul>
+							<li>"Attroperties"</li>
+							<li>DOM-vs-JavaScript memory leaks</li>
+							<li>innerHTML serialization quirks</li>
+							<li>HTML5 shimming</li>
+							<li>Spontaneous tbody in empty tables</li>
+							<li>Opacity via filters, causes grainy text</li>
+							<li>Incorrect case sensitivity on attributes</li>
+							<li>Non-W3C attachEvent model</li>
+							<li>Can't change type property of inputs</li>
+							<li>Link href attribute returns absolute URL</li>
+							<li>No bubbling on change and submit events</li>
+							<li>Unreliable offsetHeight on table elements</li>
+							<li>Thrᵒws exceptions on invalid CSS values</li>
+							<li>Appended checkboxes lose their chec√s</li>
+							<li>Broken try/finally – there's G0T to be a catch</li>
+							<li>Host objects, please NOT hosT objects</li>
+							<li>Overall codepaths</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					<h2>jQuery Projects - Sizzle</h2>
-					<p>A pure-JavaScript CSS selector engine designed to be easily dropped in to a host library.</p>
+					<section>
+						<h2>jQuery Projects - Sizzle</h2>
+						<p>A pure-JavaScript CSS selector engine designed to be easily dropped in to a host library.</p>
+					</section>
+					<section>
+						<h2>Improvements</h2>
+						<ul>
+							<li class='fragment'>id rooted selectors are 300% faster - $("#imgSlider").find("...")</li>
+							<li class='fragment'>querySelectorAll() has quirks in major browsers</li>
+							<li class='fragment'>Shorter codepath to querySelectorAll()</li>
+							<li class='fragment'>Simple selectors 5% faster- $(".tiles"), $("a"), and $("#imgSlider")</li>
+							<li class='fragment'>Grunt for building and live linting</li>
+						</ul>
+					</section>
 				</section>
 
-				<section>
-					<h2>Improvements</h2>
-					<ul>
-						<li class='fragment'>id rooted selectors are 300% faster - $("#imgSlider").find("...")</li>
-						<li class='fragment'>querySelectorAll() has quirks in major browsers</li>
-						<li class='fragment'>Shorter codepath to querySelectorAll()</li>
-						<li class='fragment'>Simple selectors 5% faster- $(".tiles"), $("a"), and $("#imgSlider")</li>
-					</ul>
-				</section>
+
 
 				<section>
 					<h2>jQuery Projects - UI</h2>
