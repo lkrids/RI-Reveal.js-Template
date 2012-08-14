@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head></head>
+	<body>
+		
+		<a href="http://api.jquery.com/category/events/">http://api.jquery.com/category/events/</a>
+
+		<img src="img/unicorn_7.jpeg" alt="Vomitting Unicorn" id="unicorn">
+
+
+		<script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+		<script src="jquery-1.8.0.js" type="text/javascript"></script>
+		<script type="text/javascript">
+
+		$(function(){
+
+			// Mouse events
+
+			// Browser events
+
+			// Captured event data
+
+			$('#unicorn').on('click hover', function(event){
+
+				cornify_add();
+
+				console.log(event);
+
+			});
+
+			$(window).on('resize', function(){
+				cornify_add();
+			});
+
+			$()
+
+		});
+
+		</script>
+	</body>
+</html>

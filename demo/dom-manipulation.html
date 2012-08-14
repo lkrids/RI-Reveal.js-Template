@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head></head>
+	<body>
+		<a href="http://api.jquery.com/category/manipulation/">http://api.jquery.com/category/manipulation/</a>
+		<div id="hook">
+			
+			<img src="img/unicorn_1.gif" alt="Unicorn" id="unicorn_1">
+			<img src="img/unicorn_2.gif" alt="Unicorn" id="unicorn_2">
+			
+		</div>
+
+		<!-- <p id="lex"></p> -->
+
+
+		<script src="jquery-1.8.0.js" type="text/javascript"></script>
+		<script type="text/javascript">
+
+		$(function(){
+
+			// Cache element
+
+			// Remove DOM node
+
+			// Add new DOM node
+
+			// Add new DOM node the right way
+
+			// Add text to DOM node (also show vanilla JS)
+
+
+
+			var $element = $('#hook');
+
+			// $element.find('#unicorn_1').remove();
+			// var $newImage = $('<img src="img/unicorn_3.gif" alt="Unicorn" id="unicorn_3">');
+			var $newImage = $('<img>')
+				.attr({
+					'src': 'img/unicorn_3.gif',
+					'alt': 'unicorn_3',
+					'id': 'unicorn_3'
+				});
+
+			$element.append($newImage);
+
+			// $('#lex').text('my name is Lex');
+
+			// var lex = document.getElementById('lex');
+			// lex.innerHTML = 'my name is Lex';
+			// lex.innerText = 'you';
+
+		});
+
+		</script>
+	</body>
+</html>

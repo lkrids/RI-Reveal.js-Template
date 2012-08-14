@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head></head>
+	<body>
+		<a href="http://api.jquery.com/category/ajax/">http://api.jquery.com/category/ajax/</a>
+		<button id="trigger">Cornify!</button>
+
+
+		<script src="jquery-1.8.0.js" type="text/javascript"></script>
+		<script type="text/javascript">
+
+		$(function(){
+
+			$.getScript('http://www.cornify.com/js/cornify.js', function(){
+
+				$('#trigger').on('click', function(){
+					cornify_add();
+				});
+
+			});
+
+		});
+
+		</script>
+	</body>
+</html>
