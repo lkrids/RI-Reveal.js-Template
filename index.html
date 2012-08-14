@@ -185,21 +185,31 @@
 					</section>
 					<section data-state="basement">
 						<h2>Closure Compiler</h2>
-						<p>Google Closure Compiler "is a tool for making JavaScript download and run faster"</p>
-						<p>jQuery without externs will not pass test suite after compiling</p>
-						<p>Experimental branch coming soon...</p>
+						<ul>
+							<li class='fragment'>Google Closure Compiler "is a tool for making JavaScript download and run faster"</li>
+							<li class='fragment'>jQuery without externs will not pass test suite after compiling</li>
+							<li class='fragment'>Experimental branch coming soon...</li>
+						</ul>
 					</section>
 					<section data-state="basement">
 						<h2>jQuery 1.9 and 2.0</h2>
 						<ul>
-							<li>jQuery 1.9 - normal updates from 1.8 <strong class='fragment'>(IE Conditionals)</strong></li>
-							<li>jQuery 2.0 - same as 1.9, no IE 6/7/8, significant refactor - plugins unlikely</li>
-							<li>jQuery 2.1 - might add new APIs not supported by 1.9 - not until ~2014</li>
+							<li class='fragment'>jQuery 1.9 - normal updates from 1.8 <strong class='fragment'>(IE Conditionals)</strong></li>
+							<li class='fragment'>jQuery 2.0 - same as 1.9, no IE 6/7/8, significant refactor - plugins unlikely</li>
+							<li class='fragment'>jQuery 2.1 - might add new APIs not supported by 1.9 - not until ~2014</li>
 						</ul>
 					</section>
+					<style>
+						.smaller-ul{
+							font-size: 20px;
+						}
+						.smaller-ul li{
+							height: 30px;
+						}
+					</style>
 					<section data-state="basement">
 						<h2>IE Accomodations</h2>
-						<ul>
+						<ul class='smaller-ul'>
 							<li>"Attroperties"</li>
 							<li>DOM-vs-JavaScript memory leaks</li>
 							<li>innerHTML serialization quirks</li>
@@ -216,7 +226,7 @@
 							<li>Appended checkboxes lose their chec√s</li>
 							<li>Broken try/finally – there's G0T to be a catch</li>
 							<li>Host objects, please NOT hosT objects</li>
-							<li>Overall codepaths</li>
+							<li class='fragment'><i><strong>Overall codepaths</strong></i></li>
 						</ul>
 					</section>
 				</section>
@@ -441,7 +451,45 @@ $(document).ready(function() {
 					</section>
 					<section data-state="basement">
 						<h2>What are deferreds</h2>
-						
+						<ul>
+							<li></li>
+							<li>Julian Aubourg’s AJAX rewrite</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Use Case</h2>
+						<ul>
+							<li><a href="http://jsbin.com/oxiqan/3/edit" target="_blank">First attempt</a></li>
+							<li><a href="http://jsbin.com/oxiqan/4/edit" target="_blank">Problem</a></li>
+							<li><a href="http://jsbin.com/oxiqan/17/edit" target="_blank">Second attempt</a></li>
+							<li><a href="http://jsbin.com/oxiqan/20/edit" target="_blank">Deferreds and $.when()</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Twitter</h2>
+						<pre><code contenteditable="true" class="javascript" class='fragment'>
+var TweetSearcher = function(username) {
+  var cache = {};
+  if (!cache[username]) {
+    cache[username] = $.getJSON('//search.twitter.com/search.json?callback=?&q='+username);
+  }
+
+  return cache[username];
+  
+}
+
+TweetSearcher('alexmcpherson').done(function(data){
+  console.log(data.results);
+  //Made a round trip
+  
+});
+
+TweetSearcher('alexmcpherson').done(function(data){
+  console.log(data.results);
+  //Did NOT make a round trip. The deferred passes the same params from the original callback
+  
+});
+						</code></pre>
 					</section>
 				</section>
 
