@@ -162,6 +162,10 @@ body {
 }
 
 .reveal ul ul {
+	margin: 0;
+}
+
+.reveal ul ul {
 	list-style-type: square;
 }
 
@@ -979,7 +983,8 @@ body {
 .basement .reveal h2, 
 .basement .reveal h3, 
 .basement .reveal h4,
-.basement p {
+.basement p,
+.basement li {
 	color: #fff!important;
 }
 
